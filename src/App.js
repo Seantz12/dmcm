@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Widget from './Widget';
 import ReactDOM from 'react-dom';
 import './App.css';
 
@@ -6,13 +7,14 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {clicks: 0}
+    this.state = {clicks: 0};
     this.addNewWidget = this.addNewWidget.bind(this);
   }
 
   addNewWidget() {
     this.setState(state => ({clicks: ++state.clicks}));
     console.log("hey! this amount of clicks has happened" + this.state.clicks);
+    ReactDOM.render(<Widget />, document.getElementById("dashboard"));
   }
 
   render() {
