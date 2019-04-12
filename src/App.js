@@ -14,7 +14,6 @@ class App extends Component {
   addNewWidget() {
     this.setState(state => ({clicks: ++state.clicks}));
     console.log("hey! this amount of clicks has happened" + this.state.clicks);
-    ReactDOM.render(<Widget />, document.getElementById("dashboard"));
   }
 
   render() {
