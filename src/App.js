@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="background">
       <h1 className="header">DND Campaign Manager</h1>
-      <button onClick={this.addNewWidget}>Click me!</button>
+      <button onClick={this.addNewWidget}>Don't click me!</button>
       </div>
       // <div className="App">
       //   <header className="App-header">
