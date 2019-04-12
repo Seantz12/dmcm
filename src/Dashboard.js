@@ -11,6 +11,7 @@ class Dashboard extends Component {
             <div className="dashboard">
                 <h1> this is where i'd put my widgets</h1>
                 <h2> IF I HAD ANY </h2>
+                <h3> :(( </h3>
             </div>
         )
     }
