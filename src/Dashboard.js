@@ -23,6 +23,7 @@ class Dashboard extends Component {
         return (
             <div className="dashboard">
                 <button onClick={() => this.createWidget("map")}>Create Map Widget</button>
+                <button onClick={() => this.createWidget("character")}>Create character Widget</button>
                 <div id="widgetLocation">
                 {this.state.widgets.map(widget => (
                     <Widget key={widget.key} type={widget.type}/>

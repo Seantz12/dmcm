@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Widget extends Component {
     constructor(props) {
         super(props);
-        this.state = {app: null, type: this.props.type};
         this.updateWidget = this.updateWidget.bind(this);
     }
 
@@ -12,10 +11,29 @@ class Widget extends Component {
     }
 
     render() {
-        return (
+        var app;
+        if(this.props.type === "map") {
+            app = <MapWidget />
+        }
+        return(
             <div className="widget">
-                <h1>this is a widget! {this.state.key} {this.state.type}</h1>
-                <button onClick={this.updateWidget}>click</button>
+                <h1>this is a widget! {this.props.type}</h1>
+                {app}
+            </div>
+        )
+    }
+}
+
+class MapWidget extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {map: null};
+    }
+
+    render() {
+        return (
+            <div className="map">
+                <img src="./logo.svg" alt="wah"></img>
             </div>
         )
     }
