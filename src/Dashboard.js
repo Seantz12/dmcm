@@ -29,9 +29,6 @@ class Dashboard extends Component {
                     <Widget key={widget.key} type={widget.type}/>
                     ))} 
                 </div>
-                <h1> this is where i'd put my widgets</h1>
-                <h2> IF I HAD ANY </h2>
-                <h3> :(( </h3>
             </div>
         )
     }
