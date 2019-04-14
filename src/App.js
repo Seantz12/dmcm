@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Widget from './Widget';
-import ReactDOM from 'react-dom';
 import './App.css';
 
 class App extends Component {

@@ -6,26 +6,26 @@ class Dashboard extends Component {
         super(props);
         this.state = { widgets: [], count: 0 };
         this.createWidget = this.createWidget.bind(this);
-        console.log(typeof(this.state.widgets))
     }
 
-    createWidget() {
-        var widget = new Widget({count: this.state.count});
+    createWidget(widgetType) {
+        var widget = { key: this.state.count, type: widgetType};
+        console.log(widget.key);
         this.setState(state => ({
             widgets: state.widgets.concat([widget]),
             count: ++state.count
         }));
         console.log('created?')
-        console.log(this.state.widgets);
     }
 
     render() {
+        console.log(this.state.widgets);
         return (
             <div className="dashboard">
-                <button onClick={this.createWidget}>Create Widget</button>
+                <button onClick={() => this.createWidget("map")}>Create Map Widget</button>
                 <div id="widgetLocation">
                 {this.state.widgets.map(widget => (
-                    <Widget count={0}/>
+                    <Widget key={widget.key} type={widget.type}/>
                     ))} 
                 </div>
                 <h1> this is where i'd put my widgets</h1>
